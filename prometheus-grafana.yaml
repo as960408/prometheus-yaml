@@ -27,6 +27,8 @@ spec:
         - name: grafana
           image: grafana/grafana:10.1.6
           imagePullPolicy: IfNotPresent
+          securityContext:
+            privileged: true
           ports:
             - containerPort: 3000
               name: http-grafana
